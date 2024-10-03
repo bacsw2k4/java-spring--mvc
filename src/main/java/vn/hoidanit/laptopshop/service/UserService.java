@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     public String handlHello() {
-        return "hello world";
+        return "hello from service";
 
     }
 }
