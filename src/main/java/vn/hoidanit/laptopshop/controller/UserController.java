@@ -24,6 +24,22 @@ public class UserController {
     public String getHomePage(Model model) {
         String test = this.userService.handlHello();
         model.addAttribute("eric", test);
+        model.addAttribute("buihobac", "from bac dep trai");
+        return "hello";
+    }
+
+    @RequestMapping("/admin/user")
+    public String getUserPage(Model model) {
+        String test = this.userService.handlHello();
+
+        return "admin/user/create";
+    }
+
+    @RequestMapping(value = "/admin/user/create", method = RequestMethod.POST)
+    public String createUserPage(Model model) {
+        String test = this.userService.handlHello();
+        System.out.println("run here");
+
         return "hello";
     }
 
